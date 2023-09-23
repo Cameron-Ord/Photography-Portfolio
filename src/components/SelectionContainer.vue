@@ -16,13 +16,14 @@ import axios from 'axios';
             getImages(i){
                 const button = this.$refs.SelectionButton[i].textContent
                 const lowercased = button.toLowerCase();
+                console.log(lowercased)
                 axios({
                     url: `${import.meta.env.VITE_APP_BASE_DOMAIN}/api/images`,
                     params:{
                         type: lowercased
                     }
                 }).then((response)=>{
-                    this.$emit('response-data', response['data']);
+                    this.$emit('response-data', response);
                 }).catch((error)=>{
                     error;
                 })

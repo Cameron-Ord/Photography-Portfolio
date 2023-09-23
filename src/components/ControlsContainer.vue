@@ -14,11 +14,11 @@
         },
         methods:{
             leftarrow(){
-                this.$emit('left-clicked', this.$refs.leftArrow);
+                this.$emit('left-clicked');
             },
 
             rightarrow(){
-                this.$emit('right-clicked', this.$refs.rightArrow);
+                this.$emit('right-clicked');
             },
         }
     }
