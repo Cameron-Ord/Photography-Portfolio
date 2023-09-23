@@ -1,18 +1,28 @@
 <template>
     <article class="ImageContainer">
         <span class="containerSpan">
-            <img src="/svgs/left.svg" alt="" class="leftArrow" ref="leftArrow">
             <div class="imgContainer">
                 <img :src="null" alt="">
             </div>
-            <img src="/svgs/right.svg" alt="" class="rightArrow" ref="rightArrow"> 
+            <controls-container></controls-container>
+            <selection-container></selection-container>
         </span>
     </article>
 </template>
 
 <script>
+import SelectionContainer from './SelectionContainer.vue';
+import ControlsContainer from '../components/ControlsContainer.vue'
     export default {
-        
+        components:{
+            ControlsContainer,SelectionContainer
+        },
+
+        data() {
+            return {
+                Image_Holder: undefined
+            }
+        },
     }
 </script>
 
@@ -21,16 +31,12 @@
     display: grid;
     >.containerSpan{
         display: grid;
-
+        justify-items: center;
         >.imgContainer{
 
-        }
+            >img{
 
-        >.rightArrow{
-            width: 25px;
-        }
-        >.leftArrow{
-            width: 25px;
+            }
         }
     }
 }
