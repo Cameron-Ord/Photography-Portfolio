@@ -33,6 +33,7 @@ import ContactMe from '../components/ContactMe.vue';
 
 <style lang="scss" scoped>
 .pageMain{
+    min-height: 100vh;
     display: grid;
     >.heroSection{
         display: grid;

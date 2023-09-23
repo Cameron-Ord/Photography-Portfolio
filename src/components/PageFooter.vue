@@ -1,7 +1,8 @@
 <template>
-    <div>
-
-    </div>
+    <nav>
+        <h3>2023 - Cameron Ord</h3>
+        <p>Photography Portfolio</p>
+    </nav>
 </template>
 
 <script>
