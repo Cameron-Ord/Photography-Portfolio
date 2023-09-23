@@ -56,9 +56,12 @@ import ControlsContainer from '../components/ControlsContainer.vue'
         display: grid;
         justify-items: center;
         >.imgContainer{
+            display: grid;
+            align-items: center;
 
             >.selectionImage{
-                width: 100px;
+                width: 100%;
+                object-fit: cover;
             }
         }
     }
