@@ -35,8 +35,31 @@ import ContactMe from '../components/ContactMe.vue';
 .pageMain{
     min-height: 100vh;
     display: grid;
+    grid-template-rows: 1.25fr 0.5fr 0.75fr 0.75fr;
     >.heroSection{
         display: grid;
+        >.heroArticle{
+            display: grid;
+            justify-items: center;
+            grid-auto-flow: row;
+            row-gap: 10px;
+
+        }
+    }
+    >.imageSection{
+        display: grid;
+        justify-items: center;
+
+    }
+    >.aboutSection{
+        display: grid;
+        justify-items: center;
+
+    }
+    >.contactSection{
+        display: grid;
+        justify-items: center;
+
     }
 }
 </style>

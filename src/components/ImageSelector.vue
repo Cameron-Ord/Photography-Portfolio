@@ -1,11 +1,15 @@
 <template>
     <article class="ImageContainer">
-        <span class="containerSpan">
-            <div class="imgContainer" v-if="Image_Holder !== undefined && Image_Holder.length !== 0">
+        <span class="containerSpan" v-if="Image_Holder !== undefined && Image_Holder.length !== 0">
+            <div class="imgContainer">
                 <img :src="Image_Holder[ImageIndex]" alt="" class="selectionImage">
             </div>
-            <controls-container @right-clicked="rightbutton" @left-clicked="leftbutton" v-if="Image_Holder !== undefined && Image_Holder.length !== 0"></controls-container>
-            <selection-container @response-data="HandleInput"></selection-container>
+        </span>
+        <span class="navSpan" v-if="Image_Holder !== undefined && Image_Holder.length !== 0">
+            <controls-container @right-clicked="rightbutton" @left-clicked="leftbutton"></controls-container>
+        </span>
+        <span class="selectionSpan">
+            <selection-container @response-data="HandleInput" class="selectionContainer"></selection-container>
         </span>
     </article>
 </template>
@@ -52,6 +56,21 @@ import ControlsContainer from '../components/ControlsContainer.vue'
 <style lang="scss" scoped>
 .ImageContainer{
     display: grid;
+    width: 100%;
+    
+
+    >.navSpan{
+        display: grid;
+        align-items: center;
+        justify-items: center;
+    }
+
+    >.selectionSpan{
+        display: grid;
+        align-items: center;
+        justify-items: center;
+    }
+
     >.containerSpan{
         display: grid;
         justify-items: center;

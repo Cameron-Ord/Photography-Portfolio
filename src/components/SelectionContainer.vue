@@ -24,6 +24,7 @@ import axios from 'axios';
                     }
                 }).then((response)=>{
                     this.$emit('response-data', response);
+                    
                 }).catch((error)=>{
                     error;
                 })
@@ -36,5 +37,17 @@ import axios from 'axios';
 </script>
 
 <style lang="scss" scoped>
+.selectionContainer{
+    display: grid;
+    width: 90%;
+    height: 50px;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+
+    >.selectiontext{
+        cursor: pointer;
+    }
+}
 
 </style>

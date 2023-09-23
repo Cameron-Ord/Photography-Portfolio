@@ -1,5 +1,5 @@
 <template>
-    <nav>
+    <nav class="footerNav">
         <h3>2023 - Cameron Ord</h3>
         <p>Photography Portfolio</p>
     </nav>
@@ -12,5 +12,16 @@
 </script>
 
 <style lang="scss" scoped>
+.footerNav{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    >p{
 
+    }
+    >h3{
+
+    }
+}
 </style>

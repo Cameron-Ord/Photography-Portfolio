@@ -15,6 +15,8 @@
     display: grid;
     justify-items: center;
     >.image{
+        padding-top: 5px;
+        padding-bottom: 5px;
         min-width: 100px;
         width: 100%;
         max-width: 770px;
