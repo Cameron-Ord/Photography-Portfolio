@@ -35,7 +35,11 @@ import ControlsContainer from '../components/ControlsContainer.vue'
                         this.Image_Holder.push(data['data'][i]['file_path'])
                     }
                 }
-
+                let pageStyle = document.querySelector('.pageMain');
+                let imageStyle = document.querySelector('.ImageContainer');
+                pageStyle.style.gridTemplateRows = '1.35fr 1.25fr 1fr 1fr';
+                imageStyle.style.gridAutoFlow='row';
+               
             },
             leftbutton(){
                 this.ImageIndex--;
@@ -57,8 +61,6 @@ import ControlsContainer from '../components/ControlsContainer.vue'
 .ImageContainer{
     display: grid;
     width: 100%;
-    
-
     >.navSpan{
         display: grid;
         align-items: center;
@@ -80,7 +82,8 @@ import ControlsContainer from '../components/ControlsContainer.vue'
 
             >.selectionImage{
                 width: 100%;
-                object-fit: cover;
+                height: 275px;
+            
             }
         }
     }

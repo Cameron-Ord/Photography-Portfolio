@@ -40,7 +40,7 @@ import axios from 'axios';
 .selectionContainer{
     display: grid;
     width: 90%;
-    height: 50px;
+  
     align-items: center;
     justify-items: center;
     grid-template-columns: repeat(auto-fit, minmax(100px,1fr));

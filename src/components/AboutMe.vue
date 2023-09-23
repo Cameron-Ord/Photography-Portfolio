@@ -17,14 +17,15 @@
     display: grid;
     align-items: center;
     justify-items: center;
-    grid-auto-flow: row;
-    row-gap: 25px;
+    grid-template-rows: 0.5fr 1fr 1fr;
+
     >.aboutHeaderText{
         text-align: center;
     }
     >.aboutText{
         text-align: center;
         width: 85%;
+        
     }
 }
 </style>

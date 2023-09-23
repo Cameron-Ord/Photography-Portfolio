@@ -35,7 +35,7 @@ import ContactMe from '../components/ContactMe.vue';
 .pageMain{
     min-height: 100vh;
     display: grid;
-    grid-template-rows: 1.25fr 0.5fr 0.75fr 0.75fr;
+    grid-template-rows: 1.25fr 0.35fr 1fr 1fr;
     >.heroSection{
         display: grid;
         >.heroArticle{
@@ -49,17 +49,19 @@ import ContactMe from '../components/ContactMe.vue';
     >.imageSection{
         display: grid;
         justify-items: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
 
     }
     >.aboutSection{
         display: grid;
         justify-items: center;
 
+
     }
     >.contactSection{
         display: grid;
         justify-items: center;
-
     }
 }
 </style>

@@ -32,12 +32,11 @@
     grid-template-columns: 1fr 1fr;
     width: 90%;
     max-width: 350px;
-    height: 50px;
     >.rightArrow{
-        width: 25px;
+        width: 50px;
     }
     >.leftArrow{
-        width: 25px;
+        width: 50px;
     }
 }
 </style>
