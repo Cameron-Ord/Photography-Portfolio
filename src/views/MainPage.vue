@@ -37,7 +37,6 @@ import ContactMe from '../components/ContactMe.vue';
     display: grid;
     >.heroSection{
         display: grid;
-
     }
 }
 </style>

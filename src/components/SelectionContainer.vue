@@ -1,15 +1,36 @@
 <template>
-    <div class="selectionContainer">
-        <h4 class="selectiontext">Summer</h4>
-        <h4 class="selectiontext">Black/White</h4>
-        <h4 class="selectiontext">Winter</h4>
-        <h4 class="selectiontext">Night</h4>
+    <div class="selectionContainer" v-if="TypeSelections !== undefined">
+        <h4 v-for="(type, i) in TypeSelections" :key="i" class="selectiontext" @click="getImages(i)" ref="SelectionButton">{{ type }}</h4>
     </div>
 </template>
 
 <script>
+import axios from 'axios';
     export default {
-        
+        data() {
+            return {
+                TypeSelections: ['Summer', 'Black/white']
+            }
+        },
+        methods:{
+            getImages(i){
+                const button = this.$refs.SelectionButton[i].textContent
+                const lowercased = button.toLowerCase();
+                axios({
+                    url: `${import.meta.env.VITE_APP_BASE_DOMAIN}/api/images`,
+                    params:{
+                        type: lowercased
+                    }
+                }).then((response)=>{
+                    this.$emit('response-data', response['data']);
+                }).catch((error)=>{
+                    error;
+                })
+            }
+        },
+        mounted(){
+
+        }
     }
 </script>
 

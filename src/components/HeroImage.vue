@@ -1,6 +1,6 @@
 <template>
     <span class="HeroImageSpan">
-        <img src="/images/birdwp.JPG" alt="" class="image">
+        <img src="/siteimages/birdwp.JPG" alt="" class="image">
     </span>
 </template>
 
