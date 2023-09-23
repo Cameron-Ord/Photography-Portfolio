@@ -1,0 +1,23 @@
+<template>
+    <span class="HeroImageSpan">
+        <img src="/images/birdwp.JPG" alt="" class="image">
+    </span>
+</template>
+
+<script>
+    export default {
+        
+    }
+</script>
+
+<style lang="scss" scoped>
+.HeroImageSpan{
+    display: grid;
+    justify-items: center;
+    >.image{
+        min-width: 100px;
+        width: 100%;
+        max-width: 770px;
+    }
+}
+</style>
