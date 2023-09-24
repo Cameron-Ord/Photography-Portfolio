@@ -28,4 +28,23 @@
         
     }
 }
+
+@media only screen and (min-width: 770px){
+.aboutSpan{
+
+    >.aboutHeaderText{
+     
+    }
+    >.aboutText{
+        text-align: center;
+        width: 75%;
+        
+    }
+}
+
+}
+
+@media only screen and (min-width: 1024px){
+
+}
 </style>

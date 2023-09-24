@@ -22,4 +22,17 @@
         max-width: 770px;
     }
 }
+
+@media only screen and (min-width: 770px){
+.HeroImageSpan{
+    >.image{
+
+        max-width: 1024px;
+    }
+}
+}
+
+@media only screen and (min-width: 1024px){
+
+}
 </style>

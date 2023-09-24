@@ -63,6 +63,33 @@
             width: 85%;
         }
     }
+}
+@media only screen and (min-width: 770px){
+    .contactSpan{
+    >.closingText{
+        >.professionLinks{
+
+            width: 60%;
+        }
+        >.contactText{
+
+            width: 75%;
+            
+        }
+    }
+    >.subHeading{
+        >.socialLinks{
+
+        }
+        >.contactText{
+        
+            width: 75%;
+        }
+    }
+}
+}
+
+@media only screen and (min-width: 1024px){
 
 }
 </style>

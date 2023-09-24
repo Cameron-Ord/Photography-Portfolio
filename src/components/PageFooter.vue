@@ -24,4 +24,19 @@
 
     }
 }
+
+@media only screen and (min-width: 770px){
+    .footerNav{
+    >p{
+
+    }
+    >h3{
+
+    }
+}
+}
+
+@media only screen and (min-width: 1024px){
+
+}
 </style>

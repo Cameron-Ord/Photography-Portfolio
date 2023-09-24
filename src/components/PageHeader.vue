@@ -22,4 +22,17 @@
         display: grid;
     }
 }
+
+@media only screen and (min-width: 770px){
+    .headerNav{
+
+    >.headerHome{
+    
+    }
+}
+}
+
+@media only screen and (min-width: 1024px){
+
+}
 </style>

@@ -39,4 +39,20 @@
         width: 50px;
     }
 }
+
+@media only screen and (min-width: 770px){
+    .controlsContainer{
+
+    >.rightArrow{
+        width: 50px;
+    }
+    >.leftArrow{
+        width: 50px;
+    }
+}
+}
+
+@media only screen and (min-width: 1024px){
+
+}
 </style>

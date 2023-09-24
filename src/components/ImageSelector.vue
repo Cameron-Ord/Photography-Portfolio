@@ -38,7 +38,7 @@ import ControlsContainer from '../components/ControlsContainer.vue'
                 let pageStyle = document.querySelector('.pageMain');
                 let imageStyle = document.querySelector('.ImageContainer');
                 pageStyle.style.gridTemplateRows = '1.35fr 1.25fr 1fr 1fr';
-                imageStyle.style.gridAutoFlow='row';
+                imageStyle.style.gridTemplateRows= 'auto auto auto';
                
             },
             leftbutton(){
@@ -75,18 +75,59 @@ import ControlsContainer from '../components/ControlsContainer.vue'
 
     >.containerSpan{
         display: grid;
-        justify-items: center;
         >.imgContainer{
             display: grid;
             align-items: center;
+            justify-items: center;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 100%;
+            height: 0;
+            padding-bottom: 75%;
+            >.selectionImage{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 768px){
+    .ImageContainer{
+
+    >.navSpan{
+
+    }
+
+    >.selectionSpan{
+
+    }
+
+    >.containerSpan{
+
+        >.imgContainer{
+            padding-bottom: 56.25%;
+
+
+            >.imgContainer img{
+
+            }
 
             >.selectionImage{
-                width: 100%;
-                height: 275px;
+
+             
             
             }
         }
     }
 }
+}
 
+@media only screen and (min-width: 1024px){
+
+}
 </style>

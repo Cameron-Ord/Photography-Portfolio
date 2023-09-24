@@ -43,11 +43,22 @@ import axios from 'axios';
   
     align-items: center;
     justify-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(125px,1fr));
 
     >.selectiontext{
         cursor: pointer;
     }
 }
+@media only screen and (min-width: 770px){
+    .selectionContainer{
 
+    >.selectiontext{
+        cursor: pointer;
+    }
+}
+}
+
+@media only screen and (min-width: 1024px){
+
+}
 </style>

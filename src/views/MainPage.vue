@@ -64,4 +64,32 @@ import ContactMe from '../components/ContactMe.vue';
         justify-items: center;
     }
 }
+@media only screen and (min-width: 770px){
+    .pageMain{
+
+    grid-template-rows: 1.25fr 0.35fr 1fr 1fr;
+    >.heroSection{
+
+        >.heroArticle{
+
+
+        }
+    }
+    >.imageSection{
+
+    }
+    >.aboutSection{
+ 
+
+
+    }
+    >.contactSection{
+
+    }
+}
+}
+
+@media only screen and (min-width: 1024px){
+
+}
 </style>

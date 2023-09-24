@@ -30,6 +30,14 @@ p,h1,h2,h3,h4,img,a{
   padding: 0px;
 }
 
+p{
+  font-size: clamp(16px, 4vw, 22px);
+}
+
+h1,h2,h3,h4{
+  font-size: clamp(20px, 4vw, 26px);
+}
+
 .svgIcon{
   width: 25px;
 }
