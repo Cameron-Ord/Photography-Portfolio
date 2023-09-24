@@ -1,38 +1,33 @@
 <template>
-    <nav class="headerNav">
-        <div class="headerHome">
-            <h2 class="homeIcon">Home</h2>
-        </div>
-    </nav>
+  <nav class="headerNav">
+    <div class="headerHome">
+      <h2 class="homeIcon">Home</h2>
+    </div>
+  </nav>
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {}
 </script>
 
 <style lang="scss" scoped>
-.headerNav{
+.headerNav {
+  display: grid;
+  align-items: center;
+  width: 100%;
+  justify-items: center;
+  > .headerHome {
     display: grid;
-    align-items: center;
-    width: 100%;
-    justify-items: center;
-    >.headerHome{
-        display: grid;
+  }
+}
+
+@media only screen and (min-width: 770px) {
+  .headerNav {
+    > .headerHome {
     }
+  }
 }
 
-@media only screen and (min-width: 770px){
-    .headerNav{
-
-    >.headerHome{
-    
-    }
-}
-}
-
-@media only screen and (min-width: 1024px){
-
+@media only screen and (min-width: 1024px) {
 }
 </style>

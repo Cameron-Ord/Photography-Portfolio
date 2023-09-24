@@ -1,7 +1,7 @@
 <script setup>
 import { RouterView } from 'vue-router'
-import PageHeader from './components/PageHeader.vue';
-import PageFooter from './components/PageFooter.vue';
+import PageHeader from './components/PageHeader.vue'
+import PageFooter from './components/PageFooter.vue'
 </script>
 
 <template>
@@ -15,18 +15,18 @@ import PageFooter from './components/PageFooter.vue';
 </template>
 
 <style scoped>
-.pageHeader{
+.pageHeader {
   display: grid;
   align-items: center;
   justify-items: center;
-  min-height: 75px;
+  min-height: 100px;
+
 }
-.pageFooter{
+.pageFooter {
   display: grid;
   align-items: center;
   justify-items: center;
   min-height: 75px;
   padding-top: 25px;
-
 }
 </style>
