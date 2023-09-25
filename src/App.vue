@@ -26,7 +26,7 @@ import PageFooter from './components/PageFooter.vue'
   display: grid;
   align-items: center;
   justify-items: center;
-  min-height: 75px;
+  min-height: 175px;
   padding-top: 25px;
 }
 </style>

@@ -37,6 +37,8 @@ export default {
 .pageMain {
   min-height: 100vh;
   display: grid;
+  grid-auto-flow: row;
+  row-gap: 50px;
 
   > .heroSection {
     display: grid;
@@ -44,7 +46,7 @@ export default {
       display: grid;
       justify-items: center;
       grid-auto-flow: row;
-      row-gap: 10px;
+      row-gap: 25px;
     }
   }
   > .imageSection {
@@ -57,6 +59,7 @@ export default {
     display: grid;
     justify-items: center;
     align-items: center;
+    grid-template-rows: 1fr 1fr;
 
   }
   > .contactSection {
@@ -68,9 +71,12 @@ export default {
 }
 @media only screen and (min-width: 770px) {
   .pageMain {
+  row-gap: 100px;
+   
 
     > .heroSection {
       > .heroArticle {
+        row-gap: 50px;
       }
     }
     > .imageSection {
@@ -84,6 +90,7 @@ export default {
 
 @media only screen and (min-width: 1024px) {
   .pageMain {
+    row-gap: 200px;
 
     align-items: center;
     > .heroSection {
@@ -97,6 +104,7 @@ export default {
     }
     > .aboutSection {
       grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
     }
     > .contactSection {
 

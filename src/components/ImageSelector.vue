@@ -35,7 +35,7 @@
         </span>
     </div>
     <span class="DesktopContainerSpan" v-if="Image_Holder !== undefined && Image_Holder.length !== 0">
-        <img :src="Image_Holder[ImageIndex]" alt="" class="selectionImage" />   
+        <img :src="Image_Holder[ImageIndex]" alt="" class="selectionImage" />
     </span>
   </article>
     </div>
@@ -55,29 +55,40 @@ export default {
       Image_Holder: undefined
     }
   },
+  created(){
+
+    window.addEventListener('resize', this.ModifyElements)
+
+  },
   methods: {
-    HandleInput(data) {
-      this.Image_Holder = []
-      if (this.Image_Holder.length === 0) {
-        for (let i = 0; i < data['data'].length; i++) {
-          this.Image_Holder.push(data['data'][i]['file_path'])
-        }
-      }
-      let pageStyle = document.querySelector('.pageMain')
-      let imageStyle = document.querySelector('.ImageContainer')
-      let desktopStyle = document.querySelector('.DesktopImageContainer');
-      const screenWidth = window.innerWidth;
-      if(screenWidth < 768){
-        pageStyle.style.gridAutoFlow = 'row'
-        imageStyle.style.gridTemplateRows = 'auto auto auto'
+
+    ModifyElements(){
+        let imageStyle = document.querySelector('.ImageContainer')
+        let desktopStyle = document.querySelector('.DesktopImageContainer');
+        const screenWidth = window.innerWidth;
+        if(screenWidth < 768){
+        imageStyle.style.gridTemplateRows = '1fr 75px 50px'
       } else if (screenWidth >= 768 && screenWidth < 1024){
-        pageStyle.style.gridAutoFlow = 'row'
-        imageStyle.style.gridTemplateRows = 'auto auto auto'
+        imageStyle.style.gridTemplateRows = '1fr 75px 50px'
       } else if (screenWidth >= 1024){
-        pageStyle.style.gridAutoFlow = 'row'
         desktopStyle.style.gridTemplateColumns = '1fr 1.5fr';
       }
-      
+
+    },
+
+    HandleInput(data) {
+        this.Image_Holder = undefined
+            if(this.Image_Holder === undefined){
+                this.Image_Holder = []
+                if (this.Image_Holder.length === 0) {
+                    for (let i = 0; i < data['data'].length; i++) {
+                    this.Image_Holder.push(data['data'][i]['file_path'])
+                    }
+ 
+                    this.ModifyElements()
+                }
+            }
+            
     },
     leftbutton() {
       this.ImageIndex--
@@ -154,7 +165,7 @@ div{
 }
 @media only screen and (min-width: 768px) {
     div{
-        
+
     >.DesktopImageContainer{
         display: none;
     }
@@ -167,7 +178,7 @@ div{
 
     > .containerSpan {
       > .imgContainer {
-        padding-bottom: 76.25%;
+        padding-bottom: 56.25%;
 
         > .selectionImage {
         }
@@ -179,7 +190,7 @@ div{
 
 @media only screen and (min-width: 1024px) {
     div{
-        
+
         >.DesktopImageContainer{
             display: grid;
             grid-template-columns: 1fr;
@@ -206,11 +217,11 @@ div{
             >.desktopdivider{
                 display: grid;
                 align-items: center;
-                
+
 
                 >.DesktopNavSpan{
                     display: grid;
-                 
+
                 }
 
                 >.DesktopSelectionSpan{

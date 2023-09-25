@@ -26,11 +26,14 @@ export default {}
   display: grid;
   align-items: center;
   justify-items: center;
+  grid-template-rows: 50px 1fr 1fr;
   > .closingText {
     display: grid;
     justify-items: center;
     align-items: center;
     width: 100%;
+    grid-template-rows: 1fr 1fr;
+  
     > .professionLinks {
       display: grid;
       justify-items: center;
@@ -40,6 +43,7 @@ export default {}
     > .contactText {
       text-align: center;
       width: 85%;
+      padding: 10px;
     }
   }
   > .subHeading {
@@ -47,6 +51,9 @@ export default {}
     justify-items: center;
     align-items: center;
     width: 100%;
+    
+
+    grid-template-rows: 1fr 1fr;
     > .socialLinks {
       display: grid;
       justify-items: center;
@@ -54,6 +61,8 @@ export default {}
     > .contactText {
       text-align: center;
       width: 85%;
+      padding: 10px;
+
     }
   }
 }

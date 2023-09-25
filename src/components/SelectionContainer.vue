@@ -21,6 +21,22 @@ export default {
     }
   },
   methods: {
+    loadInitImages(index){
+      const selection = this.TypeSelections[index];
+      const lowercased = selection.toLowerCase();
+      axios({
+        url: `${import.meta.env.VITE_APP_BASE_DOMAIN}/api/images`,
+        params: {
+          type: lowercased
+        }
+      })
+        .then((response) => {
+          this.$emit('response-data', response)
+        })
+        .catch((error) => {
+          error
+        })
+    },
     getImages(i) {
       const button = this.$refs.SelectionButton[i].textContent
       const lowercased = button.toLowerCase()
@@ -39,7 +55,10 @@ export default {
         })
     }
   },
-  mounted() {}
+  mounted() {},
+  created() {
+    this.loadInitImages(Math.floor(Math.random()* this.TypeSelections.length))
+  }
 }
 </script>
 

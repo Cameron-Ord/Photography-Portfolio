@@ -18,6 +18,7 @@ export default {}
   display: grid;
   align-items: center;
   justify-items: center;
+  grid-template-rows: 50px 1fr 1fr;
 
   > .aboutHeaderText {
     text-align: center;
@@ -25,6 +26,7 @@ export default {}
   > .aboutText {
     text-align: center;
     width: 85%;
+    padding: 10px;
   }
 }
 
