@@ -1,7 +1,7 @@
 <template>
   <div class="controlsContainer">
-    <img src="/svgs/left.svg" alt="" class="leftArrow" ref="leftArrow" @click="leftarrow" />
-    <img src="/svgs/right.svg" alt="" class="rightArrow" ref="rightArrow" @click="rightarrow" />
+    <img src="/svgs/left.svg" alt="" class="leftArrow" ref="leftArrow" @click="leftarrow" @mouseover="setColor(this.$refs.leftArrow)"/>
+    <img src="/svgs/right.svg" alt="" class="rightArrow" ref="rightArrow" @click="rightarrow" @mouseover="setColor(this.$refs.rightArrow)"/>
   </div>
 </template>
 
@@ -11,6 +11,11 @@ export default {
     return {}
   },
   methods: {
+
+    setColor(tag){
+      console.log(tag)
+    },
+
     leftarrow() {
       this.$emit('left-clicked')
     },
