@@ -20,6 +20,8 @@ export default {}
   display: grid;
   align-items: center;
   justify-items: center;
+  grid-auto-flow: row;
+  row-gap: 38px;
 
   > .heroText {
     display: grid;
@@ -35,7 +37,7 @@ export default {}
 @media only screen and (min-width: 770px) {
   .HeroTextSpan {
     > .heroText {
-      width: 75%;
+      width: 65%;
     }
     > .heroTextHeader {
     }
@@ -44,7 +46,6 @@ export default {}
 
 @media only screen and (min-width: 1024px) {
   .HeroTextSpan {
-   
     > .heroText {
       width: 75%;
     }

@@ -31,7 +31,6 @@ export default {}
 }
 
 @media only screen and (min-width: 1024px) {
-
   .HeroImageSpan {
     > .image {
       height: 100%;

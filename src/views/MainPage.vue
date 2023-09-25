@@ -53,26 +53,23 @@ export default {
     display: grid;
     justify-items: center;
     align-items: center;
-
   }
   > .aboutSection {
     display: grid;
     justify-items: center;
     align-items: center;
-    grid-template-rows: 1fr 1fr;
-
+    grid-auto-flow: row;
+    row-gap: 50px;
   }
   > .contactSection {
     display: grid;
     justify-items: center;
     align-items: center;
-
   }
 }
 @media only screen and (min-width: 770px) {
   .pageMain {
-  row-gap: 100px;
-   
+    row-gap: 100px;
 
     > .heroSection {
       > .heroArticle {
@@ -100,16 +97,13 @@ export default {
       }
     }
     > .imageSection {
-      
     }
     > .aboutSection {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr;
     }
     > .contactSection {
-
     }
-
   }
 }
 </style>

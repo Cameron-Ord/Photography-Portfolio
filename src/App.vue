@@ -20,13 +20,12 @@ import PageFooter from './components/PageFooter.vue'
   align-items: center;
   justify-items: center;
   min-height: 100px;
-
 }
 .pageFooter {
   display: grid;
   align-items: center;
   justify-items: center;
-  min-height: 175px;
-  padding-top: 25px;
+  min-height: 150px;
+
 }
 </style>

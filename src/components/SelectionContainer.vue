@@ -21,9 +21,9 @@ export default {
     }
   },
   methods: {
-    loadInitImages(index){
-      const selection = this.TypeSelections[index];
-      const lowercased = selection.toLowerCase();
+    loadInitImages(index) {
+      const selection = this.TypeSelections[index]
+      const lowercased = selection.toLowerCase()
       axios({
         url: `${import.meta.env.VITE_APP_BASE_DOMAIN}/api/images`,
         params: {
@@ -57,7 +57,7 @@ export default {
   },
   mounted() {},
   created() {
-    this.loadInitImages(Math.floor(Math.random()* this.TypeSelections.length))
+    this.loadInitImages(Math.floor(Math.random() * this.TypeSelections.length))
   }
 }
 </script>
@@ -83,9 +83,7 @@ export default {
 }
 
 @media only screen and (min-width: 1024px) {
-
   .selectionContainer {
-    
     > .selectiontext {
       cursor: pointer;
     }

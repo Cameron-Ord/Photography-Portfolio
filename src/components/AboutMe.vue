@@ -25,7 +25,7 @@ export default {}
   }
   > .aboutText {
     text-align: center;
-    width: 85%;
+    width: 75%;
     padding: 10px;
   }
 }
@@ -33,16 +33,27 @@ export default {}
 @media only screen and (min-width: 770px) {
   .aboutSpan {
     width: 100%;
-   
+
     > .aboutHeaderText {
     }
     > .aboutText {
       text-align: center;
-      width: 75%;
+      width: 60%;
     }
   }
 }
 
 @media only screen and (min-width: 1024px) {
+  .aboutSpan {
+    width: 100%;
+    height: 500px;
+
+    > .aboutHeaderText {
+    }
+    > .aboutText {
+      text-align: center;
+      width: 60%;
+    }
+  }
 }
 </style>

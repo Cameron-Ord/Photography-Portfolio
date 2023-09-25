@@ -30,6 +30,7 @@ export default {
   grid-template-columns: 1fr 1fr;
   width: 90%;
   max-width: 350px;
+  padding-top: 25px;
   > .rightArrow {
     width: 50px;
   }

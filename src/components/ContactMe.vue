@@ -33,16 +33,16 @@ export default {}
     align-items: center;
     width: 100%;
     grid-template-rows: 1fr 1fr;
-  
+
     > .professionLinks {
       display: grid;
       justify-items: center;
       grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-      width: 60%;
+      width: 40%;
     }
     > .contactText {
       text-align: center;
-      width: 85%;
+      width: 75%;
       padding: 10px;
     }
   }
@@ -51,7 +51,6 @@ export default {}
     justify-items: center;
     align-items: center;
     width: 100%;
-    
 
     grid-template-rows: 1fr 1fr;
     > .socialLinks {
@@ -60,9 +59,8 @@ export default {}
     }
     > .contactText {
       text-align: center;
-      width: 85%;
+      width: 75%;
       padding: 10px;
-
     }
   }
 }
@@ -72,22 +70,41 @@ export default {}
 
     > .closingText {
       > .professionLinks {
-        width: 60%;
+        width: 25%;
       }
       > .contactText {
-        width: 75%;
+        width: 60%;
       }
     }
     > .subHeading {
       > .socialLinks {
       }
       > .contactText {
-        width: 75%;
+        width: 60%;
       }
     }
   }
 }
 
 @media only screen and (min-width: 1024px) {
+  .contactSpan {
+    width: 100%;
+    height: 500px;
+    > .closingText {
+      > .professionLinks {
+        width: 25%;
+      }
+      > .contactText {
+        width: 60%;
+      }
+    }
+    > .subHeading {
+      > .socialLinks {
+      }
+      > .contactText {
+        width: 60%;
+      }
+    }
+  }
 }
 </style>
