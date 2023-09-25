@@ -19,6 +19,8 @@ export default {}
     height: 100%;
     object-fit: cover;
     max-width: 770px;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
   }
 }
 

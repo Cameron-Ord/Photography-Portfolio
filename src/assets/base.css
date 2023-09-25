@@ -32,6 +32,7 @@ img,
 a {
   margin: 0px;
   padding: 0px;
+  cursor: default;
 }
 
 p {
@@ -44,7 +45,14 @@ h3,
 h4 {
   font-size: clamp(20px, 4vw, 26px);
 }
+.leftArrow{
+  cursor: pointer;
+}
 
+.rightArrow{
+  cursor: pointer;
+}
 .svgIcon {
   width: 25px;
+  cursor: pointer;
 }

@@ -137,6 +137,9 @@ div {
     > .containerSpan {
       display: grid;
       justify-items: center;
+      padding-top: 7.5px;
+      padding-bottom: 7.5px;
+
 
       > .imgContainer {
         display: grid;

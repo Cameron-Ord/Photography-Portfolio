@@ -37,7 +37,7 @@ export default {}
     > .professionLinks {
       display: grid;
       justify-items: center;
-      grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(35px, 1fr));
       width: 40%;
     }
     > .contactText {

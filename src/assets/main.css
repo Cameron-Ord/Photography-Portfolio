@@ -1,1 +1,47 @@
 @import './base.css';
+:root{
+    --white:#FFFFFF;
+    --bg:#fefae0;
+    --brown:#d4a373;
+    --highlight:#faedcd;
+    --lightgreen:#e9edc9;
+    --green:#ccd5ae;
+    --darkgreen:#414833;
+    --darkergreen:#333d29;
+}
+
+body{
+    background-color: var(--bg);
+}
+.homeIcon{
+    color: var(--darkergreen);
+    background-color: var(--lightgreen);
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+}
+.heroTextHeader{
+    color: var(--darkergreen);
+    text-decoration: underline;
+    text-decoration-color:var(--darkergreen);
+    text-underline-offset: 4px;
+    text-decoration-thickness:1px;
+}
+.heroText{
+    background-color: var(--lightgreen);
+    color: var(--darkergreen);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+}
+.image{
+    background-color: var(--green);
+}
+.containerSpan{
+    background-color: var(--green);
+}
