@@ -46,13 +46,28 @@ h4 {
   font-size: clamp(20px, 4vw, 26px);
 }
 .leftArrow{
+  transition: 0.3s ease-in-out;
   cursor: pointer;
+  color: var(--darkgreen);
+  background-color: var(--lightgreen);
+  border-radius: 5px;
+  padding: 2.5px;
 }
 
 .rightArrow{
+  transition: 0.3s ease-in-out;
   cursor: pointer;
+  color: var(--darkgreen);
+  background-color: var(--lightgreen);
+  border-radius: 5px;
+  padding: 2.5px;
 }
+
 .svgIcon {
-  width: 25px;
+  width: 30px;
   cursor: pointer;
+  padding: 5px;
+  background-color: var(--lightgreen);
+  border-radius: 5px;
+  color: var(--darkgreen);
 }

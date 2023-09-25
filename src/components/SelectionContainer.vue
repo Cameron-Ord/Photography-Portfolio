@@ -72,6 +72,8 @@ export default {
 
   > .selectiontext {
     cursor: pointer;
+    margin-top: 4.5px;
+    margin-bottom: 4.5px;
   }
 }
 @media only screen and (min-width: 770px) {

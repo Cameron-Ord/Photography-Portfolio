@@ -10,7 +10,7 @@
         <controls-container
           @right-clicked="rightbutton"
           @left-clicked="leftbutton"
-        ></controls-container>
+        ref="controlsRef"></controls-container>
       </span>
       <span class="selectionSpan">
         <selection-container
@@ -59,9 +59,14 @@ export default {
     }
   },
   created() {
-    window.addEventListener('resize', this.ModifyElements)
   },
   methods: {
+
+    handleResize(){
+        this.ModifyElements();
+        this.$refs.controlsRef.handleResize();
+    },
+
     ModifyElements() {
       let imageStyle = document.querySelector('.ImageContainer')
       let desktopStyle = document.querySelector('.DesktopImageContainer')
@@ -128,6 +133,7 @@ div {
       display: grid;
       align-items: center;
       justify-items: center;
+      
     }
 
     > .desktopContainerSpan {
@@ -216,15 +222,20 @@ div {
       > .desktopdivider {
         display: grid;
         align-items: center;
+        justify-items: center;
+        grid-template-rows: 1fr 1fr;
+        height: 100%;
 
         > .DesktopNavSpan {
           display: grid;
           align-items: center;
+          width: 25%;
         }
 
         > .DesktopSelectionSpan {
           display: grid;
           align-items: center;
+          width: 75%;
         }
       }
     }

@@ -18,7 +18,7 @@ export default {}
   display: grid;
   align-items: center;
   justify-items: center;
-  grid-template-rows: 50px 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 
   > .aboutHeaderText {
     text-align: center;
@@ -27,6 +27,7 @@ export default {}
     text-align: center;
     width: 75%;
     padding: 10px;
+    max-width: 500px;
   }
 }
 
@@ -45,8 +46,10 @@ export default {}
 
 @media only screen and (min-width: 1024px) {
   .aboutSpan {
-    width: 100%;
+    width: clamp(500px, 100%, 800px);
+    max-width: 800px;
     height: 500px;
+    grid-template-rows: 100px 200px 200px;
 
     > .aboutHeaderText {
     }

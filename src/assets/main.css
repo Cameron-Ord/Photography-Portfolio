@@ -8,19 +8,77 @@
     --green:#ccd5ae;
     --darkgreen:#414833;
     --darkergreen:#333d29;
+    --evengreen: #656d4a;
+    --faintbg:#a4ac86;
 }
+
+.color-transition{
+    transition: 0.3s ease-in-out;
+}
+
+
 
 body{
     background-color: var(--bg);
 }
-.homeIcon{
-    color: var(--darkergreen);
+.contactText{
     background-color: var(--lightgreen);
+    color: var(--darkergreen);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;    
+}
+.contactHeaderText{
+    color: var(--darkergreen);
+    text-decoration: underline;
+    text-decoration-color:var(--darkergreen);
+    text-underline-offset: 4px;
+    text-decoration-thickness:1px;
+}
+.aboutText{
+    background-color: var(--lightgreen);
+    color: var(--darkergreen);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px; 
+}
+
+.aboutHeaderText{
+    color: var(--darkergreen);
+    text-decoration: underline;
+    text-decoration-color:var(--darkergreen);
+    text-underline-offset: 4px;
+    text-decoration-thickness:1px;
+}
+
+.selectionContainer>.selectiontext{
+    color: var(--darkgreen);
+    background-color: var(--lightgreen);
+    padding-left: 7.5px;
+    padding-right: 7.5px;
     border-radius: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
-    padding-left: 7.5px;
-    padding-right: 7.5px;
+}
+
+.selectionSpan{
+   
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.homeIcon{
+    color: var(--darkergreen);
+    text-decoration: underline;
+    text-decoration-color:var(--darkergreen);
+    text-underline-offset: 4px;
+    text-decoration-thickness:1px;
 }
 .heroTextHeader{
     color: var(--darkergreen);
@@ -28,6 +86,7 @@ body{
     text-decoration-color:var(--darkergreen);
     text-underline-offset: 4px;
     text-decoration-thickness:1px;
+    
 }
 .heroText{
     background-color: var(--lightgreen);

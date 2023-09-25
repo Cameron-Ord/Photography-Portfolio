@@ -7,7 +7,7 @@
       </article>
     </section>
     <section class="imageSection">
-      <image-selector></image-selector>
+      <image-selector ref="imageSelectorRef"></image-selector>
     </section>
     <section class="aboutSection contactSection">
       <about-me></about-me>
@@ -29,6 +29,16 @@ export default {
     HeroImage,
     AboutMe,
     ContactMe
+  },
+
+  methods:{
+    callChildMethod(){
+      this.$refs.imageSelectorRef.handleResize();
+    }
+  },
+
+  created(){
+    window.addEventListener('resize', this.callChildMethod);
   }
 }
 </script>
