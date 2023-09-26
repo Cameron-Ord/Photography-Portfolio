@@ -19,7 +19,6 @@ export default {}
   align-items: center;
   justify-items: center;
   grid-auto-flow: row;
-  height: 500px;
   row-gap: 50px;
 
   > .aboutHeaderText {

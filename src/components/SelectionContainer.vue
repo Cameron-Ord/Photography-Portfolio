@@ -47,10 +47,15 @@ export default {
 
     removeHighlight(ref){
       ref.style.fontSize = ''
+      ref.style.color = ''
     },
 
     Enlarge(ref){
-      ref.style.fontSize = '1.75vw'
+      if(this.screenSize >= 1024){
+        ref.style.fontSize = '1.75vw'
+      } else if (this.screenSize < 1024){
+        ref.style.color = 'var(--green)'
+      }
     },
 
     loadInitImages(index) {

@@ -87,6 +87,7 @@ export default {
     },
 
     HandleInput(data) {
+      this.ImageIndex = 0;
       this.Image_Holder = undefined
       if (this.Image_Holder === undefined) {
         this.Image_Holder = []

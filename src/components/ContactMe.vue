@@ -146,7 +146,9 @@ export default {
     row-gap: 0px;
 
   > .closingText {
-    grid-template-rows: 100px 100px;
+    grid-auto-flow: row;
+    row-gap: 35px;
+
 
 
 
@@ -160,7 +162,9 @@ export default {
     }
   }
   > .subHeading {
-    grid-template-rows: 100px 100px;
+    grid-auto-flow: row;
+    row-gap: 35px;
+
 
     > .socialLinks {
 
