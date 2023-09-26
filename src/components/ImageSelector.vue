@@ -10,13 +10,15 @@
         <controls-container
           @right-clicked="rightbutton"
           @left-clicked="leftbutton"
-        ref="controlsRef"></controls-container>
+          ref="controlsRef"
+        ></controls-container>
       </span>
       <span class="selectionSpan">
         <selection-container
           @response-data="HandleInput"
           class="selectionContainer"
-          ref="selectRef"></selection-container>
+          ref="selectRef"
+        ></selection-container>
       </span>
     </article>
     <article class="DesktopImageContainer">
@@ -25,13 +27,15 @@
           <selection-container
             @response-data="HandleInput"
             class="DesktopSelectionContainer"
-           ref="selectRef"></selection-container>
+            ref="selectRef"
+          ></selection-container>
         </span>
         <span class="DesktopNavSpan" v-if="Image_Holder !== undefined && Image_Holder.length !== 0">
           <controls-container
             @right-clicked="rightbutton"
             @left-clicked="leftbutton"
-            ref="controlsRef"></controls-container>
+            ref="controlsRef"
+          ></controls-container>
         </span>
       </div>
       <span
@@ -60,15 +64,13 @@ export default {
       Image_Holder: undefined
     }
   },
-  created() {
-  },
+  created() {},
   methods: {
-
-    handleResize(){
-        console.log('image selector received..')
-        this.ModifyElements();
-        this.$refs.controlsRef.handleResize();
-        this.$refs.selectRef.handleResize();
+    handleResize() {
+      console.log('image selector received..')
+      this.ModifyElements()
+      this.$refs.controlsRef.handleResize()
+      this.$refs.selectRef.handleResize()
     },
 
     ModifyElements() {
@@ -87,7 +89,7 @@ export default {
     },
 
     HandleInput(data) {
-      this.ImageIndex = 0;
+      this.ImageIndex = 0
       this.Image_Holder = undefined
       if (this.Image_Holder === undefined) {
         this.Image_Holder = []
@@ -140,7 +142,6 @@ div {
       display: grid;
       align-items: center;
       justify-items: center;
-      
     }
 
     > .desktopContainerSpan {
@@ -210,26 +211,26 @@ div {
         justify-items: center;
         align-items: center;
         width: 90%;
-      
-        >.imageWrapper{
+
+        > .imageWrapper {
           display: grid;
-        justify-items: center;
-        align-items: center;
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        max-width: 100%;
-        height: 0;
-        padding-bottom: 56.25%;
-        > img {
-          position: absolute;
-          top: 0;
-          left: 0;
+          justify-items: center;
+          align-items: center;
+          position: relative;
+          overflow: hidden;
           width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }  
-      }
+          max-width: 100%;
+          height: 0;
+          padding-bottom: 56.25%;
+          > img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
       }
       > .desktopdivider {
         display: grid;

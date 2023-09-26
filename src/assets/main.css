@@ -1,131 +1,125 @@
 @import './base.css';
-:root{
-    --white:#FFFFFF;
-    --bg:#fefae0;
-    --brown:#d4a373;
-    --highlight:#faedcd;
-    --lightgreen:#e9edc9;
-    --green:#ccd5ae;
-    --darkgreen:#414833;
-    --darkergreen:#333d29;
-    --evengreen: #656d4a;
-    --faintbg:#a4ac86;
+:root {
+  --white: #ffffff;
+  --bg: #fefae0;
+  --brown: #d4a373;
+  --highlight: #faedcd;
+  --lightgreen: #e9edc9;
+  --green: #ccd5ae;
+  --darkgreen: #414833;
+  --darkergreen: #333d29;
+  --evengreen: #656d4a;
+  --faintbg: #a4ac86;
 }
 
-.color-transition{
-    transition: 0.3s ease-in-out;
+.color-transition {
+  transition: 0.3s ease-in-out;
 }
 
-
-
-body{
-    background-color: var(--bg);
+body {
+  background-color: var(--bg);
 }
-.contactText{
-    background-color: var(--lightgreen);
-    color: var(--darkergreen);
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    line-height: 1.5;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 5px;    
+.contactText {
+  background-color: var(--lightgreen);
+  color: var(--darkergreen);
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
 }
-.contactHeaderText{
-    color: var(--darkergreen);
-    text-decoration: underline;
-    text-decoration-color:var(--darkergreen);
-    text-underline-offset: 4px;
-    text-decoration-thickness:1px;
+.contactHeaderText {
+  color: var(--darkergreen);
+  text-decoration: underline;
+  text-decoration-color: var(--darkergreen);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
 }
-.aboutText{
-    background-color: var(--lightgreen);
-    color: var(--darkergreen);
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    line-height: 1.5;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 5px; 
+.aboutText {
+  background-color: var(--lightgreen);
+  color: var(--darkergreen);
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
 }
 
-.aboutHeaderText{
-    color: var(--darkergreen);
-    text-decoration: underline;
-    text-decoration-color:var(--darkergreen);
-    text-underline-offset: 4px;
-    text-decoration-thickness:1px;
+.aboutHeaderText {
+  color: var(--darkergreen);
+  text-decoration: underline;
+  text-decoration-color: var(--darkergreen);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
 }
 
-.selectionContainer>div>.selectiontext{
-    color: var(--darkgreen);
-    background-color: var(--lightgreen);
-    padding-left: 7.5px;
-    padding-right: 7.5px;
-    border-radius: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    transition: 0.3s ease-in-out;
+.selectionContainer > div > .selectiontext {
+  color: var(--darkgreen);
+  background-color: var(--lightgreen);
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition: 0.3s ease-in-out;
 }
 
-.selectionSpan{
-   
-    padding-top:10px;
-    padding-bottom:10px;
+.selectionSpan {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.homeIcon{
-    color: var(--darkergreen);
-    text-decoration: underline;
-    text-decoration-color:var(--darkergreen);
-    text-underline-offset: 4px;
-    text-decoration-thickness:1px;
+.homeIcon {
+  color: var(--darkergreen);
+  text-decoration: underline;
+  text-decoration-color: var(--darkergreen);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
 }
-.heroTextHeader{
-    color: var(--darkergreen);
-    text-decoration: underline;
-    text-decoration-color:var(--darkergreen);
-    text-underline-offset: 4px;
-    text-decoration-thickness:1px;
-    
+.heroTextHeader {
+  color: var(--darkergreen);
+  text-decoration: underline;
+  text-decoration-color: var(--darkergreen);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
 }
-.heroText{
-    background-color: var(--lightgreen);
-    color: var(--darkergreen);
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    line-height: 1.5;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 5px;
+.heroText {
+  background-color: var(--lightgreen);
+  color: var(--darkergreen);
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
 }
-.image{
-    background-color: var(--green);
-    padding-top: 7.5px;
-    padding-bottom: 7.5px;
+.image {
+  background-color: var(--green);
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
 }
-.containerSpan{
-    background-color: var(--green);
-    padding-top: 7.5px;
-    padding-bottom: 7.5px;
-
+.containerSpan {
+  background-color: var(--green);
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
 }
-
 
 @media only screen and (min-width: 1024px) {
-    .image{
-        padding-top: 12.5px;
-        padding-bottom: 12.5px;
-        padding-right: 15px;
-        padding-left: 15px;
-        border-radius: 5px;
-    }
-    .DesktopContainerSpan{
-        padding-top: 12.5px;
-        padding-bottom: 12.5px;
-        padding-right: 15px;
-        padding-left: 15px;
-        border-radius: 5px;
-        background-color: var(--green);
-    }
+  .image {
+    padding-top: 12.5px;
+    padding-bottom: 12.5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 5px;
+  }
+  .DesktopContainerSpan {
+    padding-top: 12.5px;
+    padding-bottom: 12.5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 5px;
+    background-color: var(--green);
+  }
 }

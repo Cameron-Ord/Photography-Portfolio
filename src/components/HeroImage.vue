@@ -19,7 +19,6 @@ export default {}
     height: 100%;
     object-fit: cover;
     max-width: 770px;
-
   }
 }
 

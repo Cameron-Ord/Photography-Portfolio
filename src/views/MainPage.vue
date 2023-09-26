@@ -31,27 +31,26 @@ export default {
     ContactMe
   },
 
-  methods:{
-    callChildMethod(){
-      this.$refs.imageSelectorRef.handleResize();
-      this.$refs.contactRef.handleResize();
+  methods: {
+    callChildMethod() {
+      this.$refs.imageSelectorRef.handleResize()
+      this.$refs.contactRef.handleResize()
       console.log('begining call chain..')
     },
 
-    debounce(func,delay){
-      let timeout;
-      return(...args) => {
-        clearTimeout(timeout);
-        timeout = setTimeout(()=>{
-          func.apply(this, args);
-        },delay)
+    debounce(func, delay) {
+      let timeout
+      return (...args) => {
+        clearTimeout(timeout)
+        timeout = setTimeout(() => {
+          func.apply(this, args)
+        }, delay)
       }
-
-    },
+    }
   },
 
-  created(){
-    window.addEventListener('resize', this.debounce(this.callChildMethod), 300);
+  created() {
+    window.addEventListener('resize', this.debounce(this.callChildMethod), 300)
   }
 }
 </script>
@@ -126,7 +125,6 @@ export default {
     > .aboutSection {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr;
-      
     }
     > .contactSection {
     }

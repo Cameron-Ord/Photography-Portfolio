@@ -2,29 +2,29 @@
   <div class="selectionContainer" v-if="TypeSelections !== undefined">
     <div v-if="screenSize >= 1024">
       <h4
-      v-for="(type, i) in TypeSelections"
-      :key="i"
-      class="selectiontext"
-      @click="getImages(i)"
-      ref="SelectionButton"
-      @mouseover="Enlarge(this.$refs.SelectionButton[i])"
-      @mouseleave="removeHighlight(this.$refs.SelectionButton[i])"
-    >
-      {{ type }}
-    </h4>
+        v-for="(type, i) in TypeSelections"
+        :key="i"
+        class="selectiontext"
+        @click="getImages(i)"
+        ref="SelectionButton"
+        @mouseover="Enlarge(this.$refs.SelectionButton[i])"
+        @mouseleave="removeHighlight(this.$refs.SelectionButton[i])"
+      >
+        {{ type }}
+      </h4>
     </div>
     <div v-if="screenSize < 1024">
       <h4
-      v-for="(type, i) in TypeSelections"
-      :key="i"
-      class="selectiontext"
-      @click="getImages(i)"
-      ref="SelectionButton"
-      @touchstart="Enlarge(this.$refs.SelectionButton[i])"
-      @touchend="removeHighlight(this.$refs.SelectionButton[i])"
-    >
-      {{ type }}
-    </h4>
+        v-for="(type, i) in TypeSelections"
+        :key="i"
+        class="selectiontext"
+        @click="getImages(i)"
+        ref="SelectionButton"
+        @touchstart="Enlarge(this.$refs.SelectionButton[i])"
+        @touchend="removeHighlight(this.$refs.SelectionButton[i])"
+      >
+        {{ type }}
+      </h4>
     </div>
   </div>
 </template>
@@ -35,25 +35,24 @@ export default {
   data() {
     return {
       TypeSelections: ['Summer', 'Black/white'],
-      screenSize : undefined
+      screenSize: undefined
     }
   },
   methods: {
-
-    handleResize(){
+    handleResize() {
       console.log('handling resize...')
-      this.screenSize = window.innerWidth;
+      this.screenSize = window.innerWidth
     },
 
-    removeHighlight(ref){
+    removeHighlight(ref) {
       ref.style.fontSize = ''
       ref.style.color = ''
     },
 
-    Enlarge(ref){
-      if(this.screenSize >= 1024){
+    Enlarge(ref) {
+      if (this.screenSize >= 1024) {
         ref.style.fontSize = '1.75vw'
-      } else if (this.screenSize < 1024){
+      } else if (this.screenSize < 1024) {
         ref.style.color = 'var(--green)'
       }
     },
@@ -107,44 +106,44 @@ export default {
   align-items: center;
   justify-items: center;
 
-  >div{
+  > div {
     width: 100%;
     display: grid;
     justify-items: center;
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
     > .selectiontext {
-    cursor: pointer;
-    margin-top: 4.5px;
-    margin-bottom: 4.5px;
-  }
+      cursor: pointer;
+      margin-top: 4.5px;
+      margin-bottom: 4.5px;
+    }
   }
 }
 @media only screen and (min-width: 770px) {
   .selectionContainer {
-    >div{
-    display: grid;
-    align-items: center;
-    > .selectiontext {
-    cursor: pointer;
-    margin-top: 4.5px;
-    margin-bottom: 4.5px;
-  }
-  }
+    > div {
+      display: grid;
+      align-items: center;
+      > .selectiontext {
+        cursor: pointer;
+        margin-top: 4.5px;
+        margin-bottom: 4.5px;
+      }
+    }
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .selectionContainer {
-    >div{
-    display: grid;
-    align-items: center;
-    > .selectiontext {
-    cursor: pointer;
-    margin-top: 4.5px;
-    margin-bottom: 4.5px;
-  }
-  }
+    > div {
+      display: grid;
+      align-items: center;
+      > .selectiontext {
+        cursor: pointer;
+        margin-top: 4.5px;
+        margin-bottom: 4.5px;
+      }
+    }
   }
 }
 </style>

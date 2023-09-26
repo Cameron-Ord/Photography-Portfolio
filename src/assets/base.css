@@ -45,7 +45,7 @@ h3,
 h4 {
   font-size: clamp(20px, 4vw, 26px);
 }
-.leftArrow{
+.leftArrow {
   transition: 0.3s ease-in-out;
   cursor: pointer;
   color: var(--darkgreen);
@@ -54,7 +54,7 @@ h4 {
   padding: 2.5px;
 }
 
-.rightArrow{
+.rightArrow {
   transition: 0.3s ease-in-out;
   cursor: pointer;
   color: var(--darkgreen);
