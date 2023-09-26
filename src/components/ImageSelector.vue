@@ -16,7 +16,7 @@
         <selection-container
           @response-data="HandleInput"
           class="selectionContainer"
-        ></selection-container>
+          ref="selectRef"></selection-container>
       </span>
     </article>
     <article class="DesktopImageContainer">
@@ -25,20 +25,22 @@
           <selection-container
             @response-data="HandleInput"
             class="DesktopSelectionContainer"
-          ></selection-container>
+           ref="selectRef"></selection-container>
         </span>
         <span class="DesktopNavSpan" v-if="Image_Holder !== undefined && Image_Holder.length !== 0">
           <controls-container
             @right-clicked="rightbutton"
             @left-clicked="leftbutton"
-          ></controls-container>
+            ref="controlsRef"></controls-container>
         </span>
       </div>
       <span
         class="DesktopContainerSpan"
         v-if="Image_Holder !== undefined && Image_Holder.length !== 0"
       >
-        <img :src="Image_Holder[ImageIndex]" alt="" class="selectionImage" />
+        <div class="imageWrapper">
+          <img :src="Image_Holder[ImageIndex]" alt="" class="selectionImage" />
+        </div>
       </span>
     </article>
   </div>
@@ -63,8 +65,10 @@ export default {
   methods: {
 
     handleResize(){
+        console.log('image selector received..')
         this.ModifyElements();
         this.$refs.controlsRef.handleResize();
+        this.$refs.selectRef.handleResize();
     },
 
     ModifyElements() {
@@ -72,11 +76,13 @@ export default {
       let desktopStyle = document.querySelector('.DesktopImageContainer')
       const screenWidth = window.innerWidth
       if (screenWidth < 768) {
-        imageStyle.style.gridTemplateRows = '1fr 100px 100px'
+        imageStyle.style.gridAutoFlow = 'row'
+        imageStyle.style.rowGap = '50px'
       } else if (screenWidth >= 768 && screenWidth < 1024) {
-        imageStyle.style.gridTemplateRows = '1fr 100px 100px'
+        imageStyle.style.gridAutoFlow = 'row'
+        imageStyle.style.rowGap = '50px'
       } else if (screenWidth >= 1024) {
-        desktopStyle.style.gridTemplateColumns = '1fr 1.5fr'
+        desktopStyle.style.gridTemplateColumns = '1fr 1fr'
       }
     },
 
@@ -143,9 +149,7 @@ div {
     > .containerSpan {
       display: grid;
       justify-items: center;
-      padding-top: 7.5px;
-      padding-bottom: 7.5px;
-
+      align-items: center;
 
       > .imgContainer {
         display: grid;
@@ -204,9 +208,15 @@ div {
         display: grid;
         justify-items: center;
         align-items: center;
+        width: 90%;
+      
+        >.imageWrapper{
+          display: grid;
+        justify-items: center;
+        align-items: center;
         position: relative;
         overflow: hidden;
-        width: 95%;
+        width: 100%;
         max-width: 100%;
         height: 0;
         padding-bottom: 56.25%;
@@ -217,7 +227,8 @@ div {
           width: 100%;
           height: 100%;
           object-fit: cover;
-        }
+        }  
+      }
       }
       > .desktopdivider {
         display: grid;
@@ -229,7 +240,7 @@ div {
         > .DesktopNavSpan {
           display: grid;
           align-items: center;
-          width: 25%;
+          width: 50%;
         }
 
         > .DesktopSelectionSpan {

@@ -11,7 +11,7 @@
     </section>
     <section class="aboutSection contactSection">
       <about-me></about-me>
-      <contact-me></contact-me>
+      <contact-me ref="contactRef"></contact-me>
     </section>
   </main>
 </template>
@@ -34,11 +34,24 @@ export default {
   methods:{
     callChildMethod(){
       this.$refs.imageSelectorRef.handleResize();
-    }
+      this.$refs.contactRef.handleResize();
+      console.log('begining call chain..')
+    },
+
+    debounce(func,delay){
+      let timeout;
+      return(...args) => {
+        clearTimeout(timeout);
+        timeout = setTimeout(()=>{
+          func.apply(this, args);
+        },delay)
+      }
+
+    },
   },
 
   created(){
-    window.addEventListener('resize', this.callChildMethod);
+    window.addEventListener('resize', this.debounce(this.callChildMethod), 300);
   }
 }
 </script>
@@ -49,6 +62,8 @@ export default {
   display: grid;
   grid-auto-flow: row;
   row-gap: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 
   > .heroSection {
     display: grid;
@@ -103,7 +118,7 @@ export default {
     > .heroSection {
       height: 850px;
       > .heroArticle {
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr 1.5fr;
       }
     }
     > .imageSection {
@@ -111,6 +126,7 @@ export default {
     > .aboutSection {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr;
+      
     }
     > .contactSection {
     }

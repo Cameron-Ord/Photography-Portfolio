@@ -57,7 +57,7 @@ body{
     text-decoration-thickness:1px;
 }
 
-.selectionContainer>.selectiontext{
+.selectionContainer>div>.selectiontext{
     color: var(--darkgreen);
     background-color: var(--lightgreen);
     padding-left: 7.5px;
@@ -65,6 +65,7 @@ body{
     border-radius: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
+    transition: 0.3s ease-in-out;
 }
 
 .selectionSpan{
@@ -100,7 +101,31 @@ body{
 }
 .image{
     background-color: var(--green);
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
 }
 .containerSpan{
     background-color: var(--green);
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .image{
+        padding-top: 12.5px;
+        padding-bottom: 12.5px;
+        padding-right: 15px;
+        padding-left: 15px;
+        border-radius: 5px;
+    }
+    .DesktopContainerSpan{
+        padding-top: 12.5px;
+        padding-bottom: 12.5px;
+        padding-right: 15px;
+        padding-left: 15px;
+        border-radius: 5px;
+        background-color: var(--green);
+    }
 }

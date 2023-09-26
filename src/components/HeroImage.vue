@@ -1,6 +1,6 @@
 <template>
   <span class="HeroImageSpan">
-    <img src="/siteimages/birdwp.JPG" alt="" class="image" />
+    <img src="../assets/redone.jpg" alt="" class="image" />
   </span>
 </template>
 
@@ -19,8 +19,7 @@ export default {}
     height: 100%;
     object-fit: cover;
     max-width: 770px;
-    padding-top: 7.5px;
-    padding-bottom: 7.5px;
+
   }
 }
 
@@ -35,7 +34,7 @@ export default {}
 @media only screen and (min-width: 1024px) {
   .HeroImageSpan {
     > .image {
-      height: 100%;
+      height: 850px;
       object-fit: cover;
       width: 90%;
     }

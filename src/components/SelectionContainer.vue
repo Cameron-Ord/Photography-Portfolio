@@ -1,14 +1,31 @@
 <template>
   <div class="selectionContainer" v-if="TypeSelections !== undefined">
-    <h4
+    <div v-if="screenSize >= 1024">
+      <h4
       v-for="(type, i) in TypeSelections"
       :key="i"
       class="selectiontext"
       @click="getImages(i)"
       ref="SelectionButton"
+      @mouseover="Enlarge(this.$refs.SelectionButton[i])"
+      @mouseleave="removeHighlight(this.$refs.SelectionButton[i])"
     >
       {{ type }}
     </h4>
+    </div>
+    <div v-if="screenSize < 1024">
+      <h4
+      v-for="(type, i) in TypeSelections"
+      :key="i"
+      class="selectiontext"
+      @click="getImages(i)"
+      ref="SelectionButton"
+      @touchstart="Enlarge(this.$refs.SelectionButton[i])"
+      @touchend="removeHighlight(this.$refs.SelectionButton[i])"
+    >
+      {{ type }}
+    </h4>
+    </div>
   </div>
 </template>
 
@@ -17,10 +34,25 @@ import axios from 'axios'
 export default {
   data() {
     return {
-      TypeSelections: ['Summer', 'Black/white']
+      TypeSelections: ['Summer', 'Black/white'],
+      screenSize : undefined
     }
   },
   methods: {
+
+    handleResize(){
+      console.log('handling resize...')
+      this.screenSize = window.innerWidth;
+    },
+
+    removeHighlight(ref){
+      ref.style.fontSize = ''
+    },
+
+    Enlarge(ref){
+      ref.style.fontSize = '1.75vw'
+    },
+
     loadInitImages(index) {
       const selection = this.TypeSelections[index]
       const lowercased = selection.toLowerCase()
@@ -57,6 +89,7 @@ export default {
   },
   mounted() {},
   created() {
+    this.screenSize = window.innerWidth
     this.loadInitImages(Math.floor(Math.random() * this.TypeSelections.length))
   }
 }
@@ -68,27 +101,45 @@ export default {
   width: 100%;
   align-items: center;
   justify-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
 
-  > .selectiontext {
+  >div{
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+    > .selectiontext {
     cursor: pointer;
     margin-top: 4.5px;
     margin-bottom: 4.5px;
   }
+  }
 }
 @media only screen and (min-width: 770px) {
   .selectionContainer {
+    >div{
+    display: grid;
+    align-items: center;
     > .selectiontext {
-      cursor: pointer;
-    }
+    cursor: pointer;
+    margin-top: 4.5px;
+    margin-bottom: 4.5px;
+  }
+  }
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .selectionContainer {
+    >div{
+    display: grid;
+    align-items: center;
     > .selectiontext {
-      cursor: pointer;
-    }
+    cursor: pointer;
+    margin-top: 4.5px;
+    margin-bottom: 4.5px;
+  }
+  }
   }
 }
 </style>

@@ -18,7 +18,9 @@ export default {}
   display: grid;
   align-items: center;
   justify-items: center;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-flow: row;
+  height: 500px;
+  row-gap: 50px;
 
   > .aboutHeaderText {
     text-align: center;
@@ -34,7 +36,10 @@ export default {}
 @media only screen and (min-width: 770px) {
   .aboutSpan {
     width: 100%;
-
+    height: 500px;
+    grid-auto-flow: row;
+    row-gap: 0px;
+    grid-template-rows: 100px 200px 200px;
     > .aboutHeaderText {
     }
     > .aboutText {

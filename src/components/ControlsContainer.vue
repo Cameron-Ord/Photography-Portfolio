@@ -29,19 +29,10 @@ export default {
 
   methods: {
     handleResize(){
-      this.debounce(this.applySize, 400)
+      console.log('received controls...')
+      this.applySize()
     },
 
-    debounce(func,delay){
-      let timeout;
-      return(...args) => {
-        clearTimeout(timeout);
-        timeout = setTimeout(()=>{
-          func.apply(this, args);
-        },delay)
-      }
-
-    },
 
     applySize(){
       this.ScreenSize = window.innerWidth
@@ -52,14 +43,17 @@ export default {
         that.style.color = ''
         that.style.fill = ''
         that.style.width = ''
+        that.style.backgroundColor = ''
+        that.style.borderRadius = ''
 
     },
 
     changecolor(that){
         
-        that.style.color = 'var(--evengreen)'
-        that.style.fill = 'var(--lightgreen)'
-        that.style.width = '52px'
+        that.style.color = 'var(--darkgreen)'
+   
+        that.style.width = '55px'
+        that.style.borderRadius = '25%'
       
     },
 
